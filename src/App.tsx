@@ -4,21 +4,18 @@ import "./styles/App.css";
 
 import Home from "./pageComps/Home";
 import Dashboard from "./pageComps/Dashboard";
+import Nav from "./components/Nav/Nav";
 
 function App() {
   return (
     <>
-      <div>
-        nav
-        <a href="/">Home</a>
-        <a href="/Dashboard">Dash</a>
-      </div>
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/Dashboard" component={Dashboard} />
         </Switch>
       </BrowserRouter>
+      <Nav />
     </>
   );
 }
